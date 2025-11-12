@@ -64,4 +64,10 @@ li > button {
     float: right;
     color: white;
     font-weight: bold;
-  }
+}
+
+.done {
+    background: #51df71;
+    color: #00891f;
+    text-decoration: line-through;
+}
