@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tickets bestellen</title>
 </head>
 <body>
+<h1>Tickets bestellen</h1>
 
+<form id="ticket" name="tickets" action="https://formlog.offline.ch/log" method="post">
+    <div>
+        Deine Email:
+        <input type="text" name="email" />
+    </div>
+
+    <div>
+        Anzahl Tickets:
+        <select name="tickets">
+            <option value="0" selected>Bitte wählen</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+    </div>
+
+    <input id="submit" type="submit" value="Submit" />
+</form>
+
+<script src="script.js"></script>
 </body>
 </html>
