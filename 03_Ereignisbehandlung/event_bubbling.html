@@ -1,0 +1,23 @@
+<html lang="">
+<head>
+    <title>Event-Bubbling</title>
+    <script>
+        function initialize() {
+            document.getElementById("myBtn").addEventListener("click", handleClick);
+            document.getElementById("myDiv").addEventListener("click", handleClick);
+            window.addEventListener("click", handleClick);
+        }
+        function handleClick(e) {
+            console.log("currentTarget: " + e.currentTarget);
+            console.log("target: " + e.target);
+        }
+        window.addEventListener("load", initialize);
+    </script>
+</head>
+
+<body>
+<div id="myDiv">
+    <button id="myBtn">Click me</button>
+</div>
+</body>
+</html>

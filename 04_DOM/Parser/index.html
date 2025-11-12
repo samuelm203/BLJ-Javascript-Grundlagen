@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<title>Navigieren im DOM</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="parser.js"></script>
+</head>
+<body>
+    <nav id="menu">
+      <ul class="menu-list">
+         <li><a href="#">Home</a></li>
+         <li><a href="#">Products</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="#">Contact</a></li>
+      </ul>
+   </nav>
+   
+   <h1>DOM-Tabelle</h1>
+   <div id="placeholder"></div>
+
+   <script>
+      var domTable = parseNode(document.getElementById("menu"));
+      document.getElementById("placeholder").innerHTML = domTable;
+   </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body {
+    background-color: #000000;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+div {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    width: 18%;
+    text-align: center;
+}
+
+div.hover {
+    border-color: #ff0000;
+
+}
+div.hover h2 {
+    color: #ff0000;
+}
