@@ -1,0 +1,55 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formular validieren</title>
+    <script>
+        function validieren(e) {
+            let form = document.forms["fragebogen"];
+            e.preventDefault();
+
+            if (form.elements["fullname"].value.length == 0) {
+                alert("Name fehlt.")
+                form.elements["fullname"].focus();
+                console.log(form.elements["Fehler Name"]);
+                return;
+            }
+            if (form.elements["gender"].value.length == 0) {
+                alert("Geschlecht fehlt.");
+                return;
+            }
+            if (form.elements["html"].checked == false && form.elements["css"].checked == false && form.elements["js"].checked == false) {
+                alert("Teile uns bitte mit, wofür du dich interessierst.");
+                return;
+            }
+
+            form.submit();
+        }
+    </script>
+</head>
+<body>
+<h1>Formular</h1>
+<form name="fragebogen" action="skript.php" method="post">
+<div>
+    Dein Name: <input type="text" name="fullname" />
+</div>
+<div>
+    Geschlecht:
+    <input type="radio" name="gender" value="m" /> männlich
+    <input type="radio" name="gender" value="w" /> weiblich
+    <input type="radio" name="gender" value="d" /> divers
+</div>
+<div>
+    Wofür interessierst du dich?
+    <input type="checkbox" name="html" /> HTML
+    <input type="checkbox" name="css" /> CSS
+    <input type="checkbox" name="js"> JavaScript
+</div>
+<div>
+    <input type="submit" value="Absenden" />
+</div>
+</form>
+<script>
+    document.forms["fragebogen"].addEventListener("submit", validieren);
+</script>
+</body>
+</html>
