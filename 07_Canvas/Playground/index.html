@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+<canvas id="cvs" height="480" width="640"></canvas>
+<script>
+    window.onload = function() {
+        const cvs = document.getElementById("cvs");
+        const ctx = cvs.getContext("2d");
+
+        //hier kann jetzt gezeichnet werden
+        ctx.fillStyle = "rgb(255, 0, 0)";
+        ctx.fillRect(0, 0, 150, 100);
+        ctx.fillStyle = "rgba(0, 0, 255, 0.5)";
+        ctx.fillRect(50, 50, 150, 100);
+        ctx.fillStyle = "rgb(0, 255, 0)";
+        ctx.fillRect(100, 100, 150, 100);
+    }
+</script>
+</body>
+</html>
