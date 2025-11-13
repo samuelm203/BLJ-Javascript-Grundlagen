@@ -7,16 +7,20 @@ function initialize() {
 
 function add() {
     var ingredients = document.getElementById("ingredients");
+    let index = ingredients.selectedIndex;
+    let selectedOption = ingredients.getElementsByTagName("option")[index];
     
     if (ingredients.selectedIndex > -1 ) {
-        //todo: ausgewählte Zutat von der linken in die rechte Listbox verschieben 
+        document.getElementById("choice").appendChild(selectedOption);
     }
 }
 
 function remove() {
     var choice = document.getElementById("choice");
+    let index = ingredients.selectedIndex;
+    let selectedOption = ingredients.getElementsByTagName("option")[index];
     
     if (choice.selectedIndex > -1 ) {
-        //todo: ausgewählte Zutat von der rechten in die linke Listbox verschieben
+        document.getElementById("ingredients").appendChild(choice.getElementsByTagName("option")[choice.selectedIndex]);
     }
 }
