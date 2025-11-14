@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abfahrtstafel</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="title">Abfahrtstafel</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+                <div class="search-bar">
+                    <input id="station" type="text" placeholder="" autocomplete="off" />
+                    <button id="btn-primary" class="btn-primary" type="button">Verbindungen suchen →</button>
+                </div>
+        </section>
+
+        <h2 id="station-name"></h2>
+        <div id="AbfahrtMimimi">
+            <h3>Abfahrt </h3>
+            <p>Départ - Partenza - Depature</p>
+        </div>
+
+        <section class="card">
+
+            <table id="departure-table" aria-label="Abfahrten Tabelle">
+                <tr>
+                    <th scope="col">Zeit</th>
+                    <th scope="col">Zug</th>
+                    <th scope="col">Ziel</th>
+                    <th scope="col">Gleis</th>
+                </tr>
+            </table>
+
+        </section>
+
+        <script src="script.js"></script>
+    </main>
+  </body>
+</html>
