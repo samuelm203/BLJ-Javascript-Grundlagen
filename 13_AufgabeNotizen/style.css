@@ -62,13 +62,14 @@ body{
     box-shadow: var(--shadow-tiny);
 }
 
-/* Notes grid */
+
 .notes{
     margin-top: 28px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 22px;
 }
+
 .note{
     background: var(--note);
     border-radius: 6px;
